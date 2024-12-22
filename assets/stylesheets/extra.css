@@ -1,0 +1,24 @@
+:root {
+  /* --md-primary-fg-color: #5D7866; */
+  --md-primary-fg-color:   #648472;
+
+
+  /* --md-primary-fg-color--light: #ecb7b7;
+  --md-primary-fg-color--dark: #90030c; */
+}
+
+/* .survival {
+  color: #008c45
+} */
+
+/* [data-md-color-scheme="slate"] .survival {
+  color: #008c45
+} */
+
+.staff {
+  color: slategray
+}
+
+.deprecate {
+  color: slategray
+}
