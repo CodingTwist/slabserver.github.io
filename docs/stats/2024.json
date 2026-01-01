@@ -1,0 +1,43 @@
+{
+  "total-usage": {
+    "title": "Total Usage",
+    "type": "bar",
+    "x": ["API", "Web", "Mobile"],
+    "y": [12000, 18000, 9000]
+  },
+
+  "total-users": {
+    "title": "Total Users",
+    "type": "line",
+    "x": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    "y": [120, 140, 160, 200, 260, 300, 330, 360, 390, 420, 450, 480]
+  },
+
+  "monthly-traffic": {
+    "title": "Monthly Traffic",
+    "type": "line",
+    "x": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    "y": [300, 400, 380, 500, 620, 700, 680, 720, 760, 820, 900, 980]
+  },
+
+  "monthly-errors": {
+    "title": "Monthly Errors",
+    "type": "bar",
+    "x": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    "y": [32, 28, 21, 25, 19, 14, 17, 15, 12, 10, 8, 6]
+  },
+
+  "weekday-vs-weekend": {
+    "title": "Weekday vs Weekend Usage",
+    "type": "pie",
+    "data": [
+      { "name": "Weekday", "value": 78 },
+      { "name": "Weekend", "value": 22 }
+    ]
+  },
+
+  "worldMap": {
+    "type": "world-map",
+    "title": "World Stats"
+  }
+}
