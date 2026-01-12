@@ -105,9 +105,11 @@ nav:
       - Gamenight Servers: documentation/general/gamenight-servers.md
       - Assets & Downloads: documentation/general/downloads.md
       - Bans & Appeals: documentation/general/bans.md
+      - Great Slabserver Poll Results: stats/2026.md
     - Privacy Policy: documentation/general/privacy.md
   - Transparency Reports:
     - transparency/index.md
+  - Twist Performance Reviews: transparency/index.md
   - History: history/index.md
   - Community Wiki: https://wiki.slabserver.org
 exclude_docs: |
