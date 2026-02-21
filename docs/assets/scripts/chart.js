@@ -149,8 +149,9 @@ class WorldPlaytimeChart extends BaseChart {
     const m = Math.floor((ms % 3600000) / 60000);
     const s = Math.floor((ms % 60000) / 1000);
 
-    return `${d ? d + "d " : ""}${h ? h + "h " : ""}${m ? m + "m " : ""}${s || (!d && !h && !m) ? s + "s" : ""
-      }`.trim();
+    return `${d ? d + "d " : ""}${h ? h + "h " : ""}${m ? m + "m " : ""}${
+      s || (!d && !h && !m) ? s + "s" : ""
+    }`.trim();
   }
 
   toggle(active) {
@@ -159,13 +160,15 @@ class WorldPlaytimeChart extends BaseChart {
   }
 
   createMapOption(data) {
+    const format = this.formatPlaytime.bind(this);
+
     return {
-      //   tooltip: {
-      //     formatter: (p) =>
-      //       p.value == null
-      //         ? `${p.name}: no data`
-      //         : `${p.name}: ${formatPlaytime(p.value)}`,
-      //   },
+      tooltip: {
+        formatter: (p) =>
+          p.value == null
+            ? `${p.name}: no data`
+            : `${p.name}: ${format(p.value)}`,
+      },
       visualMap: {
         min: 0,
         max: Math.max(...data.map((d) => d.value)),
@@ -190,13 +193,23 @@ class WorldPlaytimeChart extends BaseChart {
     const min = Math.min(...data.map((d) => d.value).filter((v) => v > 0)) || 1;
 
     return {
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params) => {
+          const p = params[0];
+          return `${p.name}: ${this.formatPlaytime(p.value)}`;
+        },
+      },
       xAxis: {
         type: "log",
         min,
         name: "Playtime (logarithmic)",
         nameLocation: "middle",
         nameGap: 30,
-        // axisLabel: { formatter: formatPlaytime() },
+        axisLabel: {
+          formatter: (v) => this.formatPlaytime(v),
+        },
       },
       yAxis: {
         type: "category",
@@ -546,6 +559,9 @@ class Question4_US_Location extends BaseChart {
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
+        axisLabel: {
+          interval: 0,
+        },
       },
       series: [
         {
@@ -903,7 +919,10 @@ class Question9_Tenure extends BaseChart {
       "More than nine years",
     ];
 
-    this.option.title = { text: "Etho Discord / Slabserver Tenure", left: "center" };
+    this.option.title = {
+      text: "Etho Discord / Slabserver Tenure",
+      left: "center",
+    };
     this.option.yAxis.data = label;
     this.option.yAxis.name = "Time";
 
@@ -2276,7 +2295,10 @@ class Question51_PhantomGamerule extends BaseChart {
     const labelThreshold = 2; // hide labels below 2%
 
     this.option = {
-      title: { text: "Phantom Behaviour Sentiment on Slabserver", left: "center" },
+      title: {
+        text: "Phantom Behaviour Sentiment on Slabserver",
+        left: "center",
+      },
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
@@ -2369,7 +2391,10 @@ class Question58_MakingFarms extends BaseChart {
     const labelThreshold = 2; // hide labels below 2
 
     this.option = {
-      title: { text: "Making Farms for Explosion Decay gamerule by S4 Activity", left: "center" },
+      title: {
+        text: "Making Farms for Explosion Decay gamerule by S4 Activity",
+        left: "center",
+      },
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
@@ -2423,7 +2448,10 @@ class Question59_RWTrailed extends BaseChart {
     const labelThreshold = 2; // hide labels below 2
 
     this.option = {
-      title: { text: "Explosion Decay gamerule trial in RW by S4 Activity", left: "center" },
+      title: {
+        text: "Explosion Decay gamerule trial in RW by S4 Activity",
+        left: "center",
+      },
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
@@ -2639,7 +2667,10 @@ class Question57_MobdropGamerule extends BaseChart {
     const labelThreshold = 2; // hide labels below 2%
 
     this.option = {
-      title: { text: "Explosion Decay gamerule preference by S4 Activity", left: "center" },
+      title: {
+        text: "Explosion Decay gamerule preference by S4 Activity",
+        left: "center",
+      },
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
