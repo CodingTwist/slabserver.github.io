@@ -4,6 +4,20 @@ body, html {
   padding: 0;
 }
 
+.md-banner {
+  background-image: linear-gradient(to right, var(--md-primary-fg-color), var(--md-primary-fg-color), #851a1f, #851a1f, #a30e16, #851a1f, #851a1f, var(--md-primary-fg-color), var(--md-primary-fg-color));
+  /* background-color: #851a1f; */
+  color: var(--md-accent-bg-color);
+  text-align: center;
+}
+
+a.announcement-click {
+  color: #ffffff;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .md-tabs {
   overflow: visible;
 }

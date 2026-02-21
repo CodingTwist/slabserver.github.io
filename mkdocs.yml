@@ -8,10 +8,12 @@ theme:
   favicon: assets/images/favicon.png
   logo: assets/images/icon.png
   features:
+    - announce.dismiss
     - content.tooltips
-    - navigation.tabs
     - navigation.indexes
     - navigation.sections
+    - navigation.tabs
+    - navigation.tracking
   name: material
   custom_dir: overrides
   palette:
@@ -103,6 +105,9 @@ nav:
       - Shopping District Guidelines: documentation/minecraft/shopping-district.md
     - General:
       - Gamenight Servers: documentation/general/gamenight-servers.md
+      - "Great Slabserver Polls":
+        - "Great Slabserver Poll 2026": polls/2026.md
+        - "Great Slabserver Poll 2025": polls/2025.md
       - Assets & Downloads: documentation/general/downloads.md
       - Bans & Appeals: documentation/general/bans.md
     - Privacy Policy: documentation/general/privacy.md
