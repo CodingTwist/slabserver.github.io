@@ -581,31 +581,32 @@ class Question5_TZ extends BaseChart {
 
     this.option = structuredClone(BaseChart.defaultOption);
 
-    const data = [1, 1, 1, 2, 47, 22, 11, 21, 1, 23, 35, 4, 4, 6, 1, 5, 3];
-    const total = data.reduce((a, b) => a + b, 0);
-
-    const genders = [
+    const timezones = [
       "UTC-10: e.g. Hawaii-Aleutian (HST)",
-      "UTC-3",
-      "UTC-3:30: Newfoundland",
-      "UTC-4: e.g. Atlantic (AST)",
-      "UTC-5: e.g. Eastern (EST)",
-      "UTC-6: e.g. Central (CST)",
-      "UTC-7: e.g. Mountain (MST)",
-      "UTC-8: e.g. Pacific (PST)",
       "UTC-9: e.g. Alaska (AKST)",
+      "UTC-8: e.g. Pacific (PST)",
+      "UTC-7: e.g. Mountain (MST)",
+      "UTC-6: e.g. Central (CST)",
+      "UTC-5: e.g. Eastern (EST)",
+      "UTC-4: e.g. Atlantic (AST)",
+      "UTC-3:30: Newfoundland",
+      "UTC-3",
       "UTC+0: e.g. GMT, Western Europe (WET)",
       "UTC+1: e.g. Central Europe (CET)",
-      "UTC+10: e.g. Australian Eastern Standard Time (AEST)",
-      "UTC+12: e.g. New Zealand (NZST)",
       "UTC+2: e.g. Eastern Europe (EET)",
       "UTC+4",
       "UTC+5:30: India and Sri Lanka",
-      "UTC+8: e.g. Australian Western (AWST), China, the Philippines",
+      "UTC+8: e.g. Australian Western (AWST),\n China, the Philippines",
+      "UTC+10: e.g. Australian Eastern\n Standard Time (AEST)",
+      "UTC+12: e.g. New Zealand (NZST)"
     ];
 
+    // Keep your data aligned with the hardcoded timezones
+    const data = [1, 1, 21, 11, 22, 47, 2, 1, 1, 23, 35, 4, 4, 6, 5, 1, 3];
+    const total = data.reduce((a, b) => a + b, 0);
+
     this.option.title = { text: "Timezone Distribution", left: "center" };
-    this.option.yAxis.data = genders;
+    this.option.yAxis.data = timezones;
     this.option.yAxis.name = "Timezones";
 
     this.option.series = [
@@ -637,7 +638,6 @@ class Question5_TZ extends BaseChart {
     };
   }
 }
-
 class Question6_Langs extends BaseChart {
   constructor(el, manager) {
     super(el, manager);
