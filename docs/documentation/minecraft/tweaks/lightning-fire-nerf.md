@@ -9,4 +9,4 @@ tags:
 Lightning strikes can only set fires if it strikes netherrack or magma blocks, to prevent the need for glass ceilings over spawn or disabling fire tick completely.
 
 !!! info 
-    Fire only has a [20-65%](https://minecraft.wiki/w/Fire#Extinguishing) chance of being put out by rain when ticked, making lightning strikes significantly more destructive to uncovered flammable buildings - especially in [spawn chunks](https://minecraft.wiki/w/Spawn_chunk) on Multiplayer that are constantly loaded.
+    Fire only has a [20-65%](https://minecraft.wiki/w/Fire#Extinguishing) chance of being put out by rain when ticked, making lightning strikes significantly more destructive to uncovered flammable buildings.
